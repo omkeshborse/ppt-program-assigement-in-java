@@ -1,0 +1,74 @@
+Static Position:
+
+position: static; is the default positioning behavior in CSS.
+Elements with position: static; are positioned according to the normal flow of the document.
+They are not affected by top, bottom, left, or right properties.
+Example:
+css
+Copy code
+.static-example {
+  position: static;
+  width: 200px;
+  height: 200px;
+  background-color: red;
+}
+Fixed Position:
+
+position: fixed; positions an element relative to the browser window or viewport.
+The element stays fixed even when the page is scrolled.
+Example:
+css
+Copy code
+.fixed-example {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: 200px;
+  height: 200px;
+  background-color: blue;
+}
+Sticky Position:
+
+position: sticky; is a hybrid of relative and fixed positioning.
+The element behaves like relative positioning until it reaches a specific threshold (e.g., scrolling to a certain point), then it becomes fixed positioning.
+Example:
+css
+Copy code
+.sticky-example {
+  position: sticky;
+  top: 50px;
+  width: 200px;
+  height: 200px;
+  background-color: green;
+}
+Relative Position:
+
+position: relative; positions an element relative to its normal position.
+It can be adjusted using the top, bottom, left, or right properties.
+Example:
+css
+Copy code
+.relative-example {
+  position: relative;
+  top: 20px;
+  left: 20px;
+  width: 200px;
+  height: 200px;
+  background-color: yellow;
+}
+Absolute Position:
+
+position: absolute; positions an element relative to its closest positioned ancestor.
+If no positioned ancestor is found, it is positioned relative to the initial containing block (usually the browser window or viewport).
+Example:
+css
+Copy code
+.absolute-example {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 200px;
+  height: 200px;
+  background-color: orange;
+}
+These examples demonstrate the basic behavior and usage of each CSS position. The positioning properties (top, bottom, left, right) can be adjusted to achieve the desired layout and positioning for different elements on a webpage.
