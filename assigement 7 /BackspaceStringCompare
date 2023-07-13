@@ -1,0 +1,30 @@
+public class BackspaceStringCompare {
+    public static boolean backspaceCompare(String s, String t) {
+        String finalS = processBackspaces(s);
+        String finalT = processBackspaces(t);
+
+        return finalS.equals(finalT);
+    }
+
+    private static String processBackspaces(String str) {
+        StringBuilder result = new StringBuilder();
+
+        for (char c : str.toCharArray()) {
+            if (c == '#') {
+                if (result.length() > 0) {
+                    result.deleteCharAt(result.length() - 1);
+                }
+            } else {
+                result.append(c);
+            }
+        }
+
+        return result.toString();
+    }
+
+    public static void main(String[] args) {
+        String s = "ab#c";
+        String t = "ad#c";
+        System.out.println(backspaceCompare(s, t));  // Output: true
+    }
+}
