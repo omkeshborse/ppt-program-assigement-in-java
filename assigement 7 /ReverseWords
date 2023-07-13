@@ -1,0 +1,27 @@
+public class ReverseWords {
+    public static String reverseWords(String s) {
+        String[] words = s.split(" ");
+        StringBuilder reversed = new StringBuilder();
+
+        for (String word : words) {
+            reversed.append(reverseString(word)).append(" ");
+        }
+
+        return reversed.toString().trim();
+    }
+
+    private static String reverseString(String word) {
+        StringBuilder reversed = new StringBuilder();
+
+        for (int i = word.length() - 1; i >= 0; i--) {
+            reversed.append(word.charAt(i));
+        }
+
+        return reversed.toString();
+    }
+
+    public static void main(String[] args) {
+        String s = "Let's take LeetCode contest";
+        System.out.println(reverseWords(s));  // Output: "s'teL ekat edoCteeL tsetnoc"
+    }
+}
